@@ -1,0 +1,5 @@
+---
+---
+{{ reference }}
+{% if entry.doi %}[DOI: <a href="http://dx.doi.org/{{ entry.doi }}">{{ entry.doi }}</a>]{% endif %}
+{% if entry.url %}<a href="{{ entry.url }}"><i class="fas fa-external-link-alt"></i></a>{% endif %}

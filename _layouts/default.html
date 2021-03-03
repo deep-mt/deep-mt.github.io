@@ -1,0 +1,75 @@
+<html>
+{% include head.html %}
+<body>
+	{% include header.html %}
+	{% include main_visual.html %}
+	<section id="main_vis_body">
+		<div class="container">
+			<p class="body-title">研究概要</p>
+			<p class="body-text">ディープラーニング技術の研究開発を進め、文脈や対話への対応などの機械翻訳の高度化、および、マルチモーダル文脈理解などの挑戦的な研究・開発に取り組みます。</p>
+			<div class="contents-float-box">
+				<div class="contents-box">
+					<img src="{{ 'image/research1.png' | prepend: site.baseurl }}" class="contents-image">
+					<div class="contents-textbox">
+						<div class="contents-sub-title">
+							<p class="contents-number">１</p>
+							<p class="contents-text">
+								インテリジェント機械翻訳<br>
+								(高度な文脈理解)
+							</p>
+						</div>
+						<ul>
+							<li>対話翻訳エンジン</li>
+							<li>文脈に基づく訳語選択</li>
+							<li>省略された情報の補完</li>
+							<li>訳語の一貫性・ドメイン対応</li>	
+							<br>						
+						</ul>
+					</div>
+				</div>
+				<div class="contents-box">
+					<img src="{{ 'image/research2.png' | prepend: site.baseurl }}" class="contents-image">
+					<div class="contents-textbox">
+						<div class="contents-sub-title sp-relative">
+							<p class="contents-number">２</p>
+							<p class="contents-text">
+								ニュース対応翻訳<br>
+								(新話題への即時対応)
+							</p>
+						</div>
+						<ul>
+							<li>ニュース翻訳エンジン</li>
+							<li>日英記事の自動対応付け</li>
+							<li>新語・新話題への対応</li>
+							<li>要約生成/見出し生成</li>
+							<br>
+						</ul>
+					</div>
+				</div>
+				<div class="contents-box">
+					<img src="{{ 'image/research3.jpg' | prepend: site.baseurl }}" class="contents-image">
+					<div class="contents-textbox">
+						<div class="contents-sub-title">
+							<p class="contents-number">３</p>
+							<p class="contents-text">
+								マルチモーダル翻訳
+							</p>
+						</div>
+						<ul>
+							<li>シーン画像認識</li>
+							<li>画像と言語の統合的文脈理解</li>
+							<li>多言語同時キャプション生成</li>
+							<br>
+							<br>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			{{ content }}
+		</div>
+	</section>
+	{% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+{% include head.html %}
+<body>
+	{% include header.html %}
+	{% include main_visual.html %}
+	<section id="main_eng_body">
+		<div class="container">
+			<p class="body-title mb-30">About this project</p>
+			<p class="body-text mb-60">
+				This project advances the cutting-edge research and development of machine translation and deep learning so that computers can understand context, scene, and conversation.
+			</p>
+
+			<div class="contents-float-box">
+				<div class="contents-box">
+					<img src="./image/research1.png" class="contents-image">
+					<div class="contents-textbox">
+						<div class="contents-sub-title">
+							<p class="contents-number">1</p>
+							<p class="contents-text">Context-aware MT</p>
+						</div>
+						<ul>
+							<li>Conversation translation</li>
+							<li>Translation depending on context</li>
+							<li>Translation with omitted information</li>
+							<li>Consistency of word usage</li>	
+							<br>						
+							<br>						
+						</ul>
+					</div>
+				</div>
+				<div class="contents-box">
+					<img src="./image/research2.png" class="contents-image">
+					<div class="contents-textbox">
+						<div class="contents-sub-title sp-relative">
+							<p class="contents-number">2</p>
+							<p class="contents-text">
+								MT for news articles<br>
+							</p>
+						</div>
+						<ul>
+							<li>Semi-automatic corpus acquisition for MT</li>
+							<li>Translating news articles</li>
+							<li>Translation with neologisms</li>
+							<li>Summarization / headline generation</li>
+							<br>
+						</ul>
+					</div>
+				</div>
+				<div class="contents-box">
+					<img src="./image/research3.jpg" class="contents-image">
+					<div class="contents-textbox">
+						<div class="contents-sub-title">
+							<p class="contents-number">3</p>
+							<p class="contents-text">
+								Multi-modal MT
+							</p>
+						</div>
+						<ul>
+							<li>Context / scene understanding from image and language</li>
+							<li>Image scene recognition</li>
+							<li>Multi-lingual caption generation</li>
+							<br>
+							<br>
+							<br>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<ul class="float-box mt-60">
+				{% for post in site.categories.english %}
+				<li class="left-contents">
+					<a href="{{ post.url }}" class="post-link">
+						<div class="flexbox">
+							<img src="{{ post.image }}" class="post-img left">
+							<div class="left classa">
+								<p class="post-link-title">{{ post.title }}</p>
+								<p class="post-date"> {{ post.date | date: "%Y.%m.%d" }}</p>
+							</div>		
+						</div>
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+	{% include footer.html %}
+</body>
+</html>
